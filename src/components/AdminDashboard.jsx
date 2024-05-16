@@ -14,7 +14,7 @@ const AdminDashboard = () => {
     ];
 
     useEffect(() => {
-        const apiUrl = "https://book-store-admin-taupe.vercel.app/api/action.php";
+        const apiUrl = "https://moga-library.000webhostapp.com//api/action.php";
         let x = fetch(apiUrl, {
             method: "GET",
             mode: "cors", // Ensure CORS mode is set

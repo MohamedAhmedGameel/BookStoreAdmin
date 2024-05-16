@@ -13,7 +13,7 @@ function AuthorTable() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/author.php');
+                const res = await axios.get('https://moga-library.000webhostapp.com/api/author.php');
                 setAuthors(res.data);
                 setLoading(false);
             } catch (error) {
@@ -27,7 +27,7 @@ function AuthorTable() {
 
     const handleDelete = async (authorId) => {
         try {
-            const res = await axios.delete(`https://book-store-admin-taupe.vercel.app/api/author.php?authorId=${authorId}`);
+            const res = await axios.delete(`https://moga-library.000webhostapp.com/api/author.php?authorId=${authorId}`);
             const updatedAuthors = authors.filter((author) => author.author_id !== authorId);
             setAuthors(updatedAuthors);
         } catch (error) {

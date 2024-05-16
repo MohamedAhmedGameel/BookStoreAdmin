@@ -17,7 +17,7 @@ const AddAuthor = () => {
     }),
     onSubmit: async (values) => {
       try {
-        const res = await axios.post('https://book-store-admin-taupe.vercel.app/api/author.php', values);
+        const res = await axios.post('https://moga-library.000webhostapp.com//api/author.php', values);
         if (res.data?.success == true) {
           Navigate('/authors')
         }

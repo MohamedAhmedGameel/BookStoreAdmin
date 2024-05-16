@@ -23,7 +23,7 @@ const ModificationForm = ({ setModify, user }) => {
     }),
     onSubmit: async values => {
       try {
-        const res = await axios.put(`https://book-store-admin-taupe.vercel.app/api/users.php?id=${user.id}`, values);
+        const res = await axios.put(`https://moga-library.000webhostapp.com/api/users.php?id=${user.id}`, values);
         if (res.data?.success === true) {
           console.log(101)
           setModify(false)// Assuming Navigate is a function to redirect

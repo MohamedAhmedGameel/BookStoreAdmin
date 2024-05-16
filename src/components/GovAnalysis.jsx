@@ -30,7 +30,7 @@ function GovAnalysis() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/gov_analysis.php');
+                const res = await axios.get('https://moga-library.000webhostapp.com/api/gov_analysis.php');
                 setGov(res.data);
             } catch (error) {
                 console.error('Error fetching data:', error);

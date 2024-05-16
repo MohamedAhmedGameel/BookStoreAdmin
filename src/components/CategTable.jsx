@@ -14,7 +14,7 @@ function CategTable() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/category.php');
+                const res = await axios.get('https://moga-library.000webhostapp.com/api/category.php');
                 setCategories(res.data);
                 setLoading(false);
             } catch (error) {
@@ -30,7 +30,7 @@ function CategTable() {
 
     const handleDelete = async (categoryId) => {
         try {
-            const res = await axios.delete(`https://book-store-admin-taupe.vercel.app/api/category.php?categ_id=${categoryId}`);
+            const res = await axios.delete(`https://moga-library.000webhostapp.com/api/category.php?categ_id=${categoryId}`);
             const updatedCategories = categories.filter((category) => category.categ_id !== categoryId);
             setCategories(updatedCategories);
         } catch (error) {

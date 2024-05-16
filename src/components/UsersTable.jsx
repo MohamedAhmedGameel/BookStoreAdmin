@@ -28,7 +28,7 @@ function UsersTable() {
 
     const handleDelete = async (userId) => {
         try {
-            await axios.delete(`https://book-store-admin-taupe.vercel.app/api/users.php?id=${userId}`);
+            await axios.delete(`https://moga-library.000webhostapp.com/api/users.php?id=${userId}`);
             setUsers(Users.filter((user) => user.id !== userId));
         } catch (error) {
             console.error('Error deleting user:', error);

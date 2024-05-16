@@ -13,7 +13,7 @@ function ProductTable() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/action.php');
+                const res = await axios.get('hhttps://moga-library.000webhostapp.com/api/action.php');
                 setProducts(res.data);
                 setLoading(false);
             } catch (error) {
