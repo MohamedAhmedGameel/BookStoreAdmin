@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none !important;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth !important;
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth !important;
+}
+table.basic {
+  @apply w-full rounded-md;
+}
+table.basic thead tr td,
+table.basic thead tr th {
+  @apply bg-blue-100;
+}
+table.basic tr td {
+  @apply border border-blue-200 p-1 pl-3 w-28 border-solid;
+}
+@tailwind utilities;
