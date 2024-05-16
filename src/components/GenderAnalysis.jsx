@@ -24,7 +24,7 @@ function GenderAnalysis() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('http://127.0.0.1/phpreactcrud/api/gender_analysis.php');
+                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/gender_analysis.php');
                 setGen(res.data);
             } catch (error) {
                 console.error('Error fetching data:', error);

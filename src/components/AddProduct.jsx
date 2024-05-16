@@ -17,10 +17,10 @@ function AddProduct({ setModify, book }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const authorRes = await axios.get('http://127.0.0.1/phpreactcrud/api/author.php');
+                const authorRes = await axios.get('https://book-store-admin-taupe.vercel.app/api/author.php');
                 setAuthors(authorRes.data);
 
-                const categoryRes = await axios.get('http://127.0.0.1/phpreactcrud/api/category.php');
+                const categoryRes = await axios.get('https://book-store-admin-taupe.vercel.app/category.php');
                 setCategories(categoryRes.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -50,7 +50,7 @@ function AddProduct({ setModify, book }) {
         onSubmit: async (values, { setSubmitting, resetForm }) => {
             if (!book) {
                 try {
-                    const res = await axios.post('http://127.0.0.1/phpreactcrud/api/action.php', values);
+                    const res = await axios.post('https://book-store-admin-taupe.vercel.app/api/action.php', values);
                     if (res.data?.success == true) {
                         navigate('/books');
                     }
@@ -64,7 +64,7 @@ function AddProduct({ setModify, book }) {
                 }
             } else {
                 try {
-                    const res = await axios.post('http://127.0.0.1/phpreactcrud/api/action.php', values);
+                    const res = await axios.post('https://book-store-admin-taupe.vercel.app/api/action.php', values);
                     console.log(formik.values);
                     if (res.data?.success == true) {
                         navigate('/books');

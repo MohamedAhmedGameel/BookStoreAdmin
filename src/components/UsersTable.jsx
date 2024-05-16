@@ -15,7 +15,7 @@ function UsersTable() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('http://127.0.0.1/phpreactcrud/api/users.php');
+                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/users.php');
                 setUsers(res.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -28,7 +28,7 @@ function UsersTable() {
 
     const handleDelete = async (userId) => {
         try {
-            await axios.delete(`http://127.0.0.1/phpreactcrud/api/users.php?id=${userId}`);
+            await axios.delete(`https://book-store-admin-taupe.vercel.app/api/users.php?id=${userId}`);
             setUsers(Users.filter((user) => user.id !== userId));
         } catch (error) {
             console.error('Error deleting user:', error);

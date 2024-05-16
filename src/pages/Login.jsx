@@ -23,7 +23,7 @@ function LoginPage() {
 
         onSubmit: async (values) => {
             try {
-                const res = await axios.post('http://127.0.0.1/phpreactcrud/login/admin.php', values);
+                const res = await axios.post('https://book-store-admin-taupe.vercel.app/login/admin.php', values);
                 if (res.status === 200) {
                     if (res.data?.success == true) {
                         console.log(101)

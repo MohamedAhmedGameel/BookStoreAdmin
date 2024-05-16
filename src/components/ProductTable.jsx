@@ -13,7 +13,7 @@ function ProductTable() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('http://127.0.0.1/phpreactcrud/api/action.php');
+                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/action.php');
                 setProducts(res.data);
                 setLoading(false);
             } catch (error) {
@@ -27,7 +27,7 @@ function ProductTable() {
 
     const handleDelete = async (productId) => {
         try {
-            await axios.delete(`http://127.0.0.1/phpreactcrud/api/action.php?id=${productId}`);
+            await axios.delete(`https://book-store-admin-taupe.vercel.app/api/action.php?id=${productId}`);
             setProducts(products.filter((product) => product.id !== productId));
         } catch (error) {
             console.error('Error deleting product:', error);

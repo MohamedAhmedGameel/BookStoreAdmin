@@ -19,7 +19,7 @@ function CategoryAnalysis() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('http://127.0.0.1/phpreactcrud/api/category_analysis.php');
+                const res = await axios.get('https://book-store-admin-taupe.vercel.app/api/category_analysis.php');
                 setcat(res.data);
             } catch (error) {
                 console.error('Error fetching data:', error);

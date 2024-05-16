@@ -14,7 +14,7 @@ const AdminDashboard = () => {
     ];
 
     useEffect(() => {
-        const apiUrl = "http://127.0.0.1:80/phpreactcrud/api/action.php";
+        const apiUrl = "https://book-store-admin-taupe.vercel.app/api/action.php";
         let x = fetch(apiUrl, {
             method: "GET",
             mode: "cors", // Ensure CORS mode is set

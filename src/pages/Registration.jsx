@@ -44,7 +44,7 @@ const RegistrationForm = () => {
         }),
         onSubmit: async (values) => {
             try {
-                const res = await axios.post('http://127.0.0.1/phpreactcrud/login/register.php', values);
+                const res = await axios.post('https://book-store-admin-taupe.vercel.app/login/register.php', values);
                 if (res.status === 200) {
                     console.log(res.data.success);
                     if (res.data.success) {
